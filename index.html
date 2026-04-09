@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="fotos/SESSÃO SOLENE.png" rel="shortcut icon" type="image/x-icon"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d0da5",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101022",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: "Public Sans", sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">account_balance</span>
+</div>
+<span class="text-primary font-black text-xl tracking-tight uppercase">João Batista Torres</span>
+</div>
+</div>
+<nav class="hidden lg:flex flex-1 justify-center gap-8">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="PaginaInicial.html">Home</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#news-slider">Notícias</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="documentos.html">Documentos</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Eventos</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Galeria</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-semibold hover:text-primary transition-colors" href="#">Direitos Humanos</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold tracking-wide hover:bg-primary/90 transition-all" href="contato.html">
+<span>Contato</span>
+</a>
+<button class="lg:hidden text-slate-700 dark:text-slate-200" id="menuBtn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Menu -->
+<div class="hidden flex flex-col gap-4 px-6 pb-6 lg:hidden bg-white dark:bg-slate-900 shadow-lg border-b border-primary/10" id="mobileMenu">
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-100 dark:border-slate-800" href="PaginaInicial.html">Home</a>
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-100 dark:border-slate-800" href="#news-slider">Notícias</a>
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-100 dark:border-slate-800" href="documentos.html">Documentos</a>
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-100 dark:border-slate-800" href="#">Eventos</a>
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold border-b border-slate-100 dark:border-slate-800" href="#">Galeria</a>
+<a class="py-2 text-slate-700 dark:text-slate-200 font-semibold" href="#">Direitos Humanos</a>
+</div>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-4 md:px-20 lg:px-40 py-12 md:py-20 bg-gradient-to-br from-background-light to-white dark:from-background-dark dark:to-slate-900">
+<div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+              Trabalhando por uma <span class="text-primary italic">cidade melhor</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              Com seriedade e transparência, um mandato participativo fortalece a democracia e aproxima o cidadão das decisões públicas.
+            </p>
+</div>
+<div class="w-full lg:w-1/2 relative">
+<div class="absolute -top-4 -right-4 w-full h-full border-4 border-primary/10 rounded-2xl -z-10"></div>
+<div class="w-full aspect-[4/5] bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative">
+<img alt="João Batista Torres" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ui47vO0wjU5yHkxpJ2B9sgoMdsPt0zqzGPTqx-SMagoeBg8LMkZUxX2qjdD6PhurvRIS4lahf-knLTvHyNem1StLLeLJ65RjpepMBtfBVnP7buMCqOX9X5SaVbm05AwfJuS8JvAXJx9KIuc4dWgefIjXezwNZed1SZPFMh4oRD5o7FLO1K8_OrzJd2wFi9ARCL4lQUqXIEftbRfHJdzhKp3PVzPoB7oxOMDjRA8odTkKoqgSJHZTQ0Kx9-rExXQ3z53j1qF453DJA"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white text-sm font-medium">João Batista Torres</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Slider Section -->
+<section class="px-4 md:px-20 lg:px-40 py-16 bg-white dark:bg-slate-900/50">
+<div class="max-w-[1200px] mx-auto relative">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl font-bold tracking-tight">Últimas Notícias</h2>
+<div class="h-1.5 w-20 bg-primary mt-2 rounded-full"></div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold hover:underline" href="#news-slider">Ver todas <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<div class="flex overflow-x-auto gap-6 no-scrollbar pb-8" id="news-slider">
+<!-- News Card 1 -->
+<div class="min-w-[300px] md:min-w-[380px] bg-background-light dark:bg-background-dark rounded-xl overflow-hidden group border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+<a href="noticiaPreojetoDeLei(Taxoplasmose).html">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Saúde Pública" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujUywBYlCgDUR8_E6zn7n6Xs-7kzyN-oPCt2F-U0I0blWphihlK4wibAOo0c79si3w_4R81FOo6GnS-2R0P_gN0v2XAdjdP63ylsNjHFB3tpSmSYkdJ0qbiTMxj6xls2I2hpPZi4YmrvzP6qB1K6FUu0OmsFYjGL1TO-Uh_rnUzfyW6GNyY5wpmnH0e2TPsatMghUjJ3qqLjLGFVdtajGyLY40uTM9aGo4fwWA_RhijJn1Y-hasynZ2TQDCzYc4z_CkROejM_edOA"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Saúde Pública</div>
+</div>
+</a>
+<div class="p-6">
+<span class="text-xs text-slate-500 font-medium">11 de Março, 2025</span>
+<a href="noticiaPreojetoDeLei(Taxoplasmose).html">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors"> Aprovado: Programa de Incentivo à Detecção e Conscientização sobre a Toxoplasmose. </h3>
+</a>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 line-clamp-2"> O projeto incentiva a realização de exames para detecção da toxoplasmose e promove ações de conscientização e prevenção da doença. </p>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="min-w-[300px] md:min-w-[380px] bg-background-light dark:bg-background-dark rounded-xl overflow-hidden group border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+<a href="Infrastutura(Portilhão).html">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Infraestrutura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugIUeYq-N9I-HBB73WF3SNIljdgG1Wo9KhabYQPRsMFWFrdZHDEUcRs0hsNiS5Ew3Dw5TDce7O5cUimNXfF2xehMc1wlVp49_Ga1UQ7h9GOGBiGAqF0WHzWxYngBqKKKZvnsKIFQlVKjR8_YPGzxeJHCY62qBwVa_goD0UXLHuyKq5jmz4PED7IspzYkWzoksyWzLesV4H3yz9PJK85iH7MDMh7g3BZOJNSaa-Qh3XlMxB8P1frpQyYErpvSvbwgnEPVEVw-j0tRg"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Infraestrutura</div>
+</div>
+</a>
+<div class="p-6">
+<span class="text-xs text-slate-500 font-medium">11 de Março, 2025</span>
+<a href="Infrastutura(Portilhão).html">
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors"> Retorno da obra do portilhão que liga os bairros Planalto e Cidade Nova </h3>
+</a>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 line-clamp-2"> Ouvimos as demandas dos moradores sobre iluminação pública e segurança nas praças. </p>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="min-w-[300px] md:min-w-[380px] bg-background-light dark:bg-background-dark rounded-xl overflow-hidden group border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Obras" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMElo7y8k76FYmJMSRkdkh0yZiaPGOQdUIgad2m7TJNEIE1EujYK6ZqzxhwDpxgixCPTgV6AOFkj4rdzyYfc9UTMTqJnbSbLds2kREZ2DjmUbGcpvBIRflu7S6qNO54zBq607H3ZKau-rC0glqHVSnf2n-ghb7Az0norJCa_6cawiR5ZC2i-ksZlS4w3DF92-Q8hXPwkJIBfOKmzBoswPuEq6aLwO16UMd0qPx5IdILYYWTr49mKYnF-V5ozspsx2UNbh0dSw70UeO"/>
+<div class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase">Obras</div>
+</div>
+<div class="p-6">
+<span class="text-xs text-slate-500 font-medium">10 de Outubro, 2023</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors"> Fiscalização das obras do novo Hospital Municipal Norte </h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-3 line-clamp-2"> Acompanhamos o cronograma e a qualidade dos materiais utilizados na construção. </p>
+</div>
+</div>
+</div>
+<button class="btn-left absolute left-[-20px] top-[50%] -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-slate-800 border-2 border-primary/20 text-primary shadow-lg hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="btn-right absolute right-[-20px] top-[50%] -translate-y-1/2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-slate-800 border-2 border-primary/20 text-primary shadow-lg hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Instagram Section -->
+<section class="px-4 md:px-20 lg:px-40 py-16 bg-background-light dark:bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col items-center text-center mb-12">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-pink-600">photo_camera</span>
+<span class="text-sm font-bold tracking-widest uppercase text-slate-500">Instagram</span>
+</div>
+<h2 class="text-3xl font-bold mb-4">Acompanhe no Dia a Dia</h2>
+<a class="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:scale-105 transition-transform" href="https://www.instagram.com/joaobatistatorress/" target="_blank">
+<span>Siga @JoãoBatistaTorres</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4">
+<!-- Post 1 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/p/DVT17EHEZ5T/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 1" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0ujp32_eS7NAQ9M0v9pLWKrVfl8AiOkwhPFqASi9gPqBHh-lhdpDM1wVrCDymmdCWTS6XdJob39qo2rrbUHgzo-e6algpcwP41RWLInq3MHbuk7KKrQ9qQLFekE7Bm58GYwey4y-Q4idTtBLv9WdauRwndzQG_45MZaLjDQUE9Yk581DbDmVnbZwdRLeMSVd6kn9yEEjQNU-Sn35EBhbLPxqnN1ZXY5HQvWVo1vPdrFZYh7kaUZBpZkk3eT557Aic3I77m97MM8PI94"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+<!-- Post 2 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/p/DV1MSP8ETYs/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 2" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0ug0JGu7jgPJZOUQS_el6F-a0OA66prylZ21LKKlr7bpUjxvXZpRrHHNkKAKEDi-wxgxfUtp7fpx44AIO0V1uE5HeSVPGdtS8BwNm_wL1qapjXALpCNoinPGGPIBWmnDTi2YgMlQZWs3IXo0KI2hhCzbzfuUiSugi9EAUPGWihvinSuWk89ED0y4qLqmO67XSSiyd8X8OCNoQg2wD2FgqzLhVijWobWhgJEU_dF4vZ-InXhWnzYFDoZfGN0StNT-2baeCB2vzAnlJjY"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+<!-- Post 3 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/reel/DV1xo-BAfaK/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 3" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0uiKdr5lVYsKtw4dGxTXMV10qMMgESZDshNB12QKkTxnIJJfOuCPntX6dj0emtnw5deoCgqK6oTnrcud4s-bLO9lQnDWNey8gSkgyc9hFlOqCtugEve1fteW1g5slK9sfPLS4JNclMYSszomTg_ovNXoEvdAgf-ZDVSsapaHVWc-1GJTtfSyEjZb8u1P-yWHF1-TEWu8orpFUtteM5TYi6uXHNZiJg_PSHTuVskPCA08ltC7p4UUMQkn1UtvstArW9JAX0YFEzeyUU4"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+<!-- Post 4 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/reel/DVgomo9EWJQ/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 4" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0ujDqQxYgSAbsHvuwIWLR5S8Z8vXcupR6awyzycAw6E2UjcfMb7x6V1Cbe5AuW9alyphiyuoqC6cTNcD4ts2-JHwVcO-rQiCzLyppRzt1Rt8kmILUGsh_A0Bh9pR1dBAQwFC7kDA1o_6oemzDbEPOfxMh3_0eaErMPwNC_Pg-uGASj5Vod-jiM_3ioQP5uKiAbVKBbP7vmW8Mj8PqsVZxRlq7LWh3hAPDIsbtDi3rPq1x1LcERiiD7EUXrpUo4whiibhBFUwlkhxWYk"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+<!-- Post 5 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/p/DVrM8MuFFpW/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 5" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0ugHVjE9VWVpAmuD0TNWD2Df6K7yHNoewk9xdp_JWK741UiqHxFaadKMYcNku8EZqocCW_qj1N0d-TJQwh27VAKB0sx9sD10SgJPwn0K-9INM93MlYEP1LsCETL2EnCxSk-noQEaD2wjx5wjzrStFfU3tQcNnD_g8GxXZ8U8R2St_RUd-q8e1q5mkMQAtPElPfh7nrQZtA6fnaAYkkwvrIfq6_axqnonFYKb6DjJmvPMTMK1HYkYtLix3CKdHNCbIc9DuXC1bMpEWBU"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+<!-- Post 6 -->
+<a class="aspect-square bg-slate-200 rounded-lg overflow-hidden group cursor-pointer relative block" href="https://www.instagram.com/reel/DV2EV-rEznO/?utm_source=ig_web_copy_link" target="_blank">
+<img alt="Instagram post 6" class="w-full h-full object-cover group-hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0uhuzM15IZv3m49Vxm5O12Sq1OSZ7JBhy26knaAM7H0oR2NNXZuJVAjFk9Kami-o66vfmrjzX5fFr5suz4nwavik4L4nOpCYJayjamJV8VbT_koLkfNY8ghkPThXOWa1JnpksjX3XxGFk_Cqwqs3ddz60xCmyerAZUF5n_9u5wkG-qidyQMrjdHaI3DgEWXucME9EpYvq2uU8Qe0B8YSwA7-iCk1KZI-RlzALl2eKuOv4u4G5juLL33m6Dp2puQkpEzX2i9QOtqr_AM"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/20 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-slate-900 text-slate-300 px-4 md:px-20 lg:px-40 py-16">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white">account_balance</span>
+</div>
+<span class="text-primary font-black text-xl tracking-tight uppercase">João Batista Torres</span>
+</div>
+</div>
+<p class="text-sm leading-relaxed">
+            Compromisso com o povo e com a verdade. Atuando com transparência e foco no bem-estar social.
+          </p>
+</div>
+<div>
+<h3 class="text-white font-bold mb-6">Links Rápidos</h3>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="https://www.cmnat.rn.gov.br/portal-da-transparencia" target="_blank">Transparência</a></li>
+<li><a class="hover:text-white transition-colors" href="https://sapl.natal.rn.leg.br/materia/pesquisar-materia?tipo=1&amp;ano=2026&amp;autoria__autor=185&amp;autoria__primeiro_autor=True" target="_blank">Projetos de Lei</a></li>
+<li><a class="hover:text-white transition-colors" href="agendasemana.html">Agenda Semanal</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-6">Localização</h3>
+<div class="w-full h-32 rounded-lg mb-4 overflow-hidden">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.4628982413274!2d-35.20299962413635!3d-5.79009835713581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b300130ba2f73f%3A0x812bf32f3124459f!2sC%C3%A2mara%20Municipal%20de%20Natal!5e0!3m2!1spt-BR!2sbr!4v1773948605699!5m2!1spt-BR!2sbr" style="border:0;" width="100%"></iframe>
+</div>
+<p class="text-xs">Câmara Municipal de Natal, Rua Jundiaí, 524 - Tirol</p>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2026 Gabinete João Batista Torres. Todos os direitos reservados.</p>
+</div>
+</footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // =========================
+  // MENU MOBILE
+  // =========================
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Fecha menu ao clicar em um link (melhor UX no mobile)
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+
+  // =========================
+  // SLIDER DE NOTÍCIAS
+  // =========================
+  const newsSlider = document.getElementById('news-slider');
+  const btnLeft = document.querySelector('.btn-left');
+  const btnRight = document.querySelector('.btn-right');
+
+  if (newsSlider) {
+
+    // Botões
+    if (btnLeft) {
+      btnLeft.addEventListener('click', () => {
+        newsSlider.scrollBy({
+          left: -300,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    if (btnRight) {
+      btnRight.addEventListener('click', () => {
+        newsSlider.scrollBy({
+          left: 300,
+          behavior: 'smooth'
+        });
+      });
+    }
+
+    // Swipe no mobile (arrastar com dedo)
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    newsSlider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - newsSlider.offsetLeft;
+      scrollLeft = newsSlider.scrollLeft;
+    });
+
+    newsSlider.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    newsSlider.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+
+    newsSlider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - newsSlider.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      newsSlider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch (celular)
+    newsSlider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX;
+      scrollLeft = newsSlider.scrollLeft;
+    });
+
+    newsSlider.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX;
+      const walk = (x - startX) * 1.5;
+      newsSlider.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  // =========================
+  // SCROLL SUAVE
+  // =========================
+  const linksInternos = document.querySelectorAll('a[href^="#"]');
+
+  linksInternos.forEach(link => {
+    link.addEventListener('click', function (e) {
+      const destino = document.querySelector(this.getAttribute('href'));
+      if (destino) {
+        e.preventDefault();
+        destino.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+});
+</script>
+</body></html>
