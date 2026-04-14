@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agenda de Eventos | João Batista Torres</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<style>
+body { font-family: 'Public Sans', sans-serif; background-color: #fbf8ff; color: #1b1b23; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+
+<body class="bg-background text-on-surface">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-white shadow">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+
+<!-- LOGO -->
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-900 text-3xl">account_balance</span>
+<div>
+<h1 class="text-xl font-bold text-blue-900">João Batista Torres</h1>
+<p class="text-[10px] font-bold tracking-widest text-blue-900">VEREADOR</p>
+</div>
+</div>
+
+<!-- MENU -->
+<nav id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white shadow-md flex-col gap-4 p-6 md:flex md:static md:w-auto md:bg-transparent md:shadow-none md:flex-row md:items-center md:gap-8">
+<a href="index.html" class="text-slate-600">Home</a>
+<a href="#" class="text-slate-600">Notícias</a>
+<a href="#" class="text-slate-600">Documentos</a>
+<a href="#" class="text-blue-900 font-bold">Eventos</a>
+<a href="#" class="text-slate-600">Galeria</a>
+<a href="#" class="text-slate-600">Direitos Humanos</a>
+<a href="contato.html" class="text-slate-600">Contato</a>
+</nav>
+
+<!-- BOTÃO MOBILE -->
+<button id="menuBtn" class="md:hidden">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+
+</div>
+</header>
+
+<!-- MAIN -->
+<main class="pt-28 px-6 max-w-4xl mx-auto">
+
+<h2 class="text-4xl font-bold text-blue-900 mb-6">
+Agenda de Eventos
+</h2>
+
+<p class="mb-10 text-gray-600">
+Acompanhe os compromissos do vereador e participe das ações da comunidade.
+</p>
+
+<!-- EVENTO 1 -->
+<div class="bg-white shadow rounded-lg p-6 mb-6">
+<h3 class="text-xl font-bold mb-2">Gabinete na Rua</h3>
+<p class="text-sm text-gray-500 mb-2">17 de Abril de 2006 • 07:00</p>
+<p class="text-gray-600">
+No guarapes no terminal de onibus.
+</p>
+</div>
+
+<!-- EVENTO 2 -->
+<div class="bg-white shadow rounded-lg p-6 mb-6">
+<h3 class="text-xl font-bold mb-2">Calçada da Saúde </h3>
+<p class="text-sm text-gray-500 mb-2">18 de Abril • 08:00</p>
+<p class="text-gray-600">
+Igreja Metodista.
+</p>
+
+</div><!-- EVENTO 3 -->
+<div class="bg-white shadow rounded-lg p-6 mb-6">
+<h3 class="text-xl font-bold mb-2">Ação da Pascoa </h3>
+<p class="text-sm text-gray-500 mb-2">18 de Abril • 16:00</p>
+<p class="text-gray-600">
+Igreja Metodista.
+</p>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-16 bg-gray-100 p-6 text-center text-sm text-gray-500">
+© 2024 João Batista Torres
+</footer>
+
+<!-- SCRIPT MENU MOBILE -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+// abrir/fechar menu
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+
+// fechar ao clicar em link
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
+});
+</script>
+
+</body>
+</html>
